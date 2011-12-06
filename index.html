@@ -193,6 +193,37 @@ require './app'
 
 run App</code></pre>
 </div>
+</div><div class="slide" data-transition="fade"><div class="content" ref="presentation/presentation/17">
+<pre class="sh_ruby"><code># Gemfile
+source :rubygems
+
+gem 'sinatra'</code></pre>
+</div>
+</div><div class="slide" data-transition="fade"><div class="content" ref="presentation/presentation/18">
+<pre class="sh_ruby"><code># app.rb
+require 'bundler/setup'
+require 'sinatra'
+
+class App &lt; Sinatra::Application
+  get '/' do
+    @current_time = Time.now
+
+    # Render views/index
+    # Automatically pulls in layout.html.erb
+    erb :index
+  end
+end</code></pre>
+</div>
+</div><div class="slide" data-transition="fade"><div class="content bullets incremental" ref="presentation/presentation/19">
+<h1>Deployment on Engine Yard</h1>
+
+<ul>
+<li>Add application to Github</li>
+<li>Create new account https://login.engineyard.com/signup</li>
+<li>Create application using Github URL</li>
+</ul>
+
+</div>
 </div></div>
 
 </body>
