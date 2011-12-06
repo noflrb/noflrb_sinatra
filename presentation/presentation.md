@@ -123,5 +123,36 @@
     
     run App
     
+!SLIDE transition=fade
 
+    @@@ruby
+    # Gemfile
+    source :rubygems
+    
+    gem 'sinatra'
+    
+!SLIDE transition=fade
+
+    @@@ruby
+    # app.rb
+    require 'bundler/setup'
+    require 'sinatra'
+    
+    class App < Sinatra::Application
+      get '/' do
+        @current_time = Time.now
+      
+        # Render views/index
+        # Automatically pulls in layout.html.erb
+        erb :index
+      end
+    end
+    
+    
+!SLIDE bullets incremental transition=fade
+# Deployment on Engine Yard
+
+* Add application to Github
+* Create new account https://login.engineyard.com/signup
+* Create application using Github URL
     
