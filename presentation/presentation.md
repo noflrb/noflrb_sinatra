@@ -153,6 +153,6 @@
 # Deployment on Engine Yard
 
 * Add application to Github
-* Create new account https://login.engineyard.com/signup
+* Create new account [https://login.engineyard.com/signup](https://login.engineyard.com/signup)
 * Create application using Github URL
     
